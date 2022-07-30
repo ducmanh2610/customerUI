@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="click-tap-image/dist/css/image-zoom.css" />
+    <script src="jGallery/dist/js/jgallery.min.js"></script>
+    <!-- <script src="jQueryMousewheel/jquery.mousewheel.min.js"></script> -->
+    <title>Car Details</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header-top">
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="images/vehica-logo-white-retina.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="col-md-6">
+                        <ul class="navbar-nav mb-2 mb-lg-0 navbar-top-right">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Search</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Listing
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Pages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">More</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="navbar-nav mb-2 mb-lg-0 navbar-top-right">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"><span class="pe-2"><i
+                                            class="bi bi-person"></i></span><span>Login</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Register</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav-link-button" href="#" role="button" aria-expanded="false">
+                                    <span class="pe-2"><i class="bi bi-plus-lg"></i></span><span>Add
+                                        Listing</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="main-detail py-3">
+        <div class="detail-header container">
+            <h1 class="text-dark">
+                BMW 8-serie 2-door coupe grey
+            </h1>
+            <ul>
+                <li>2021</li>
+                <li>Coupe</li>
+                <li>Petrol</li>
+            </ul>
+            <div class="detail-car">
+                <h1 class="orange-color">$62,000</h1>
+                <span>Add to Favorite</span>
+            </div>
+            <div class="owl-carousel owl-theme owl-loaded">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item"><img src="images/audi-1.jpg" alt="audi-1.jpg"></div>
+                        <div class="owl-item"><img src="images/audi-11.jpg" alt="audi-2.jpg"></div>
+                        <div class="owl-item"><img src="images/audi-3.jpg" alt="audi-3.jpg"></div>
+                        <div class="owl-item"><img src="images/audi-4.jpg" alt="audi-4.jpg"></div>
+                        <div class="owl-item"><img src="images/audi-5.jpg" alt="audi-5.jpg"></div>
+                        <div class="owl-item"><img src="images/audi-6.jpg" alt="audi-6.jpg"></div>
+                        <div class="owl-item"><img src="images/audi-7.jpg" alt="audi-7.jpg"></div>
+                        <div class="owl-item"><img src="images/audi-8.jpg" alt="audi-8.jpg"></div>
+                        <div class="owl-item"><img src="images/audi-9.jpg" alt="audi-9.jpg"></div>
+                        <div class="owl-item"><img src="images/audi-10.jpg" alt="audi-10.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+            </nav>
+
+            <div class="row pb-3">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="detail-content">
+                        <h1>Description</h1>
+                        <p>How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for
+                            Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between
+                            eleven and twelve knots,” and the Henrietta confirmed his prediction.</p>
+                        <p>If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did
+                            not veer round to the east, if no accident happened to the boat or its machinery, the
+                            Henrietta might cross the three thousand miles from New York to Liverpool in the nine days,
+                            between the 12th and the 21st of December. It is true that, once arrived, the affair on
+                            board the Henrietta, added to that of the Bank of England, might create more difficulties
+                            for Mr. Fogg than he imagined or could desire.</p>
+                        <p>
+                            During the first days, they went along smoothly enough. The sea was not very unpropitious,
+                            the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta
+                            ploughed across the waves like a real trans-Atlantic steamer.
+                        </p>
+                    </div>
+                    <div class="detail-car-history">
+                        <div class="detail-car-history-item">
+                            <span class="orange-color pe-2"><i class="bi bi-check2-circle"></i></span><span>Backup
+                                camera</span>
+                        </div>
+                        <div class="detail-car-history-item">
+                            <span class="orange-color pe-2"><i class="bi bi-check2-circle"></i></span><span>Blind-spot
+                                warning</span>
+                        </div>
+                        <div class="detail-car-history-item">
+                            <span class="orange-color pe-2"><i class="bi bi-check2-circle"></i></span><span>Brake
+                                assist</span>
+                        </div>
+                        <div class="detail-car-history-item">
+                            <span class="orange-color pe-2"><i
+                                    class="bi bi-check2-circle"></i></span><span>Forward-collision warning</span>
+                        </div>
+                        <div class="detail-car-history-item">
+                            <span class="orange-color pe-2"><i class="bi bi-check2-circle"></i></span><span>Parking
+                                assist systems</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12">
+                    <div class="detail-car-info">
+                        <span class="fw-bold">Make:</span>
+                        <span>BMW</span>
+                        <span class="fw-bold">Model:</span>
+                        <span>8-serie</span>
+                        <span class="fw-bold">Color:</span>
+                        <span>Grey</span>
+                        <span class="fw-bold">Drive type:</span>
+                        <span>Front Wheel Drive</span>
+                        <span class="fw-bold">Transmission:</span>
+                        <span>Automatic</span>
+                        <span class="fw-bold">Condition:</span>
+                        <span>New</span>
+                        <span class="fw-bold">Year:</span>
+                        <span>2021</span>
+                        <span class="fw-bold">Fuel type:</span>
+                        <span>Petrol</span>
+                        <span class="fw-bold">Engine size:</span>
+                        <span>3.8L</span>
+                        <span class="fw-bold">Door:</span>
+                        <span>2 doors</span>
+                        <span class="fw-bold">Cylinder:</span>
+                        <span>4</span>
+                        <span class="fw-bold">VIN:</span>
+                        <span>1C4TJPBA1CD907950</span>
+                    </div>
+                    <div class="detail-car-button">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            class="btn btn-outline-warning"><span><i class="bi bi-telephone-fill"></i></span><span>123
+                                *** *** - reveal</span></button>
+                        <button type="button" class="btn btn-success"><span><i
+                                    class="bi bi-whatsapp"></i></span><span>Chat in
+                                Whatsapp</span></button>
+                        <button type="button" class="btn btn-warning"><span><i
+                                    class="bi bi-chat-dots"></i></span><span>Send Message</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer text-light">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/vehica-logo-white-retina.png" alt="vehica">
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-sm-12">
+                            <ul>
+                                <li>
+                                    <p>Listing</p>
+                                </li>
+                                <li>
+                                    <p>Listing</p>
+                                </li>
+                                <li>
+                                    <p>Listing</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-12">
+                            <ul>
+                                <li>
+                                    <p>Listing</p>
+                                </li>
+                                <li>
+                                    <p>Listing</p>
+                                </li>
+                                <li>
+                                    <p>Listing</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-12">
+                    <form>
+                        <h3>Subscribe to more information</h3>
+                        <i>Your Name</i>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <i>Phone Number</i>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <i>Email</i>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-12 text-end">
+                    <h1><span>(123)</span><span>456-79801</span></h1>
+                    <email>Support@vehica.com</email>
+                    <address><i>West 12th Street
+                            New York, NY, USA </i></address>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full screen modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header modal-black">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"><i
+                            class="bi bi-x-circle"></i></button>
+                </div>
+                <div id="gallery">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="OwlCarousel/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>

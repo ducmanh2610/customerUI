@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    <title>Vehica - Choose your perfect car !</title>
+</head>
+
+<body>
+    <div class="header-top">
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="images/vehica-logo-white-retina.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="col-md-6">
+                        <ul class="navbar-nav mb-2 mb-lg-0 navbar-top-right">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Search</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Listing
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Pages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">More</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="navbar-nav mb-2 mb-lg-0 navbar-top-right">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"><span class="pe-2"><i
+                                            class="bi bi-person"></i></span><span>Login</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Register</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav-link-button" href="#" role="button" aria-expanded="false">
+                                    <span class="pe-2"><i class="bi bi-plus-lg"></i></span><span>Add
+                                        Listing</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="search-main-content">
+        <div class="container-fluid">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="search-area">
+            <div class="container-fluid">
+                <div class="row select-top">
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row select-bottom">
+                    <div class="col">
+                        <div class="row">
+                            <div class="input-group">
+                                <input type="text" aria-label="First name" class="form-control">
+                                <input type="text" aria-label="Last name" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row select-option">
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row select-option">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-group">
+                                    <input type="text" aria-label="First name" class="form-control">
+                                    <input type="text" aria-label="Last name" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                    <div class="col">
+
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+                <div class="search-more-filter">
+                    <a href="#">Clear All</a>
+                    <a href="#" onclick="clickToggle()" class="search-show-more-button"><span class="orange-color"><i
+                                class="bi bi-chevron-double-down"></i></span><span>More Filter</span></a>
+                </div>
+                <div class="search-title-bar">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="allCarTab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                        aria-selected="true">All</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="newCarTab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-profile" type="button" role="tab"
+                                        aria-controls="pills-profile" aria-selected="false">New</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="usedCarTab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-contact" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">Used</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <div class="search-compare">
+                                <i class="bi bi-arrow-left-right"></i>
+                                <span>Compare</span>
+                            </div>
+                            <div class="search-input">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Recipient's username"
+                                        aria-label="Recipient's username with two button addons">
+                                    <button class="btn btn-outline-secondary" type="button"><i
+                                            class="bi bi-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-result-content">
+                    <div class="row">
+                        <div class="col-6">
+                            <h1>100 Results</h1>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="search-result-icon">
+                                        <span><i class="bi bi-grid-fill"></i></span>
+                                        <span><i class="bi bi-list"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="search-result-sort-by">
+                                        <span>Sort by</span>
+                                        <span>
+                                            <select class="form-select" id="inputGroupSelect01">
+                                                <option selected>Choose...</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                    aria-labelledby="allCarTab" tabindex="0">
+                                    <div class="all-car-tab-item">
+                                        <div class="container-fluid">
+                                            <div class="row py-2 car-item-wrapper">
+                                                <a href="detail-image-album.html"></a>
+                                                <div class="car-item" href="">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 py-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                    aria-labelledby="newCarTab" tabindex="0">
+                                    <div class="all-car-tab-item">
+                                        <div class="container-fluid">
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 py-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                    aria-labelledby="usedCarTab" tabindex="0">
+                                    <div class="all-car-tab-item">
+                                        <div class="container-fluid">
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2 py-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row py-2">
+                                                <div class="car-item">
+                                                    <div class="col-3">
+                                                        <div class="car-item-image">
+                                                            <img src="images/bmw-1.jpg" alt="bmw">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <div class="car-item-detail">
+                                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Aperiam,
+                                                                ipsam.</p>
+                                                            <div class="car-item-specifies">
+                                                                <ul>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem.</li>
+                                                                    <li>Lorem, ipsum dolor.</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="car-item-location">
+                                                                <span>Location: </span>
+                                                                <span>New York, NY, USA</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="car-item-price">
+                                                            <i class="bi bi-star"></i>
+                                                            <div class="car-item-price-calc">
+                                                                <h1 class="price orange-color">$62.000</h1>
+                                                                <p class="text-muted">Calculate financing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <img src="images/mycar-add-sidebar.png" alt="sidebar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-pagination">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="footer text-light">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/vehica-logo-white-retina.png" alt="vehica">
+                </div>
+                <div class="col-3">
+                    <div class="row fw-bold">
+                        <div class="col-6">
+                            <ul>
+                                <li>
+                                    <p>Listing</p>
+                                </li>
+                                <li>
+                                    <p>FAQ</p>
+                                </li>
+                                <li>
+                                    <p>About Us</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li>
+                                    <p>Blog</p>
+                                </li>
+                                <li>
+                                    <p>Our Team</p>
+                                </li>
+                                <li>
+                                    <p>Contact</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <form>
+                        <h3>Subscribe to more information</h3>
+                        <i>Your Name</i>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <i>Phone Number</i>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <i>Email</i>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-3 text-end">
+                    <h1><span>(123)</span><span class="orange-color fw-bold"> 456-79801</span></h1>
+                    <email>Support@vehica.com</email>
+                    <address><i>West 12th Street
+                            New York, NY, USA </i></address>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="OwlCarousel/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
